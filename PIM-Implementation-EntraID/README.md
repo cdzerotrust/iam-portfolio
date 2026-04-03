@@ -5,7 +5,7 @@
 This lab demonstrates the implementation of **Privileged Identity Management (PIM)** in Microsoft Entra ID to enforce:
 
 * Least privilege access
-* Just-in-Time (JIT) role activation
+* Just-In-Time (JIT) role activation
 * Privileged access governance
 
 ---
@@ -13,7 +13,7 @@ This lab demonstrates the implementation of **Privileged Identity Management (PI
 ## 🎯 Objectives
 
 * Configure eligible role assignments
-* Enable Just-in-Time (JIT) access
+* Enable Just-In-Time (JIT) access
 * Reduce standing privileges
 * Implement approval-based role activation
 * Track and audit privileged access
@@ -32,76 +32,82 @@ This lab demonstrates the implementation of **Privileged Identity Management (PI
 
 ### 1. Navigate to PIM
 
-Microsoft Entra Admin Center → Identity Governance → Privileged Identity Management
+Accessed via:
+**Microsoft Entra Admin Center → Identity Governance → Privileged Identity Management**
 
-![Step 1](./pim-01-navigation-to-pim.png)
-
----
-
-### 2. Assign Eligible Role
-
-* Selected **User Administrator**
-* Assignment Type: **Eligible**
-* Scope: **Directory**
-
-![Step 2](./pim-02-role-selection-user-admin.png)
+![Navigate to PIM](./pim-01-navigation-to-pim.png)
 
 ---
 
-### 3. Configure Assignment Settings
+### 2. Select Role – User Administrator
 
-* Enabled **Permanently Eligible**
-* Configured assignment duration
+Chose the **User Administrator** role for controlled identity management operations.
 
-![Step 3](./pim-03-add-assignment.png)
+![Select Role](./pim-02-role-selection-user-admin.png)
+
+---
+
+### 3. Assign Eligible Role
+
+Configured role as **Eligible** instead of permanently active:
+
+* Assignment Type: Eligible
+* Scope: Directory
+
+This removes standing administrative access.
+
+![Add Assignment](./pim-03-add-assignment.png)
 
 ---
 
 ### 4. Configure Role Settings (Security Controls)
 
-* Required **Azure MFA**
-* Required **justification on activation**
-* Required **approval to activate**
-* Set **activation duration limits**
+Implemented governance controls:
 
-![Step 4](./pim-05-edit-role-settings.png)
+* Require **Azure MFA**
+* Require **justification on activation**
+* Require **approval to activate**
+* Configure **activation duration limits**
+
+![Role Settings](./pim-05-edit-role-settings.png)
 
 ---
 
-### 5. Activate Role (JIT)
+### 5. Activate Role (Just-In-Time Access)
+
+Performed JIT activation:
 
 * Navigated to **My Roles**
 * Selected **User Administrator**
-* Clicked **Activate**
+* Submitted activation request
 
-![Step 5](./pim-07-role-activation-success.png)
+![Activation](./pim-07-role-activation-success.png)
 
 ---
 
-### 6. Validate Activation
+### 6. Validate Active Role
 
-* Role transitioned from **Eligible → Active**
-* Verified time-bound activation
+Confirmed role transitioned from **Eligible → Active** with time-bound access.
 
-![Step 6](./pim-08-active-assignments.png)
+![Active Assignment](./pim-08-active-assignments.png)
 
 ---
 
 ## 🔍 Key Security Benefits
 
-* Eliminates permanent admin access
-* Reduces attack surface
-* Supports Zero Trust principles
-* Enables audit and compliance tracking
-* Prevents privilege creep
+* Eliminates **permanent administrative access**
+* Reduces **attack surface**
+* Enforces **Zero Trust principles**
+* Enables **audit and compliance tracking**
+* Prevents **privilege creep**
 
 ---
 
 ## ⚠️ Lessons Learned
 
 * Approval workflows can block activation if misconfigured
-* Time-bound assignments must align with policy limits
-* Global Administrator roles must be tightly controlled to avoid lockout
+* Activation duration must align with policy limits
+* Global Administrator roles must be tightly controlled
 * Always maintain a **break-glass account**
 
 ---
@@ -111,7 +117,7 @@ Microsoft Entra Admin Center → Identity Governance → Privileged Identity Man
 In enterprise environments, PIM is used to:
 
 * Enforce least privilege access
-* Provide temporary elevated access for administrators
+* Provide temporary elevated access
 * Meet compliance requirements (SOC 2, ISO 27001, NIST)
 * Monitor privileged account activity
 
@@ -120,102 +126,4 @@ In enterprise environments, PIM is used to:
 ## 📎 Author
 
 Chris Davis
-Cloud Security Engineer | IAM | Zero Trust
-# 🔐 Privileged Identity Management (PIM) Implementation – Microsoft Entra ID
-
-## 📌 Overview
-This lab demonstrates the implementation of Privileged Identity Management (PIM) in Microsoft Entra ID to enforce **least privilege access**, **Just-in-Time (JIT) role activation**, and **privileged access governance**.
-
----
-
-## 🎯 Objectives
-- Configure **eligible role assignments**
-- Enable **Just-in-Time (JIT) access**
-- Reduce **standing privileges**
-- Implement **approval-based role activation**
-- Track and audit privileged access
-
----
-
-## 🏗️ Environment
-- Microsoft Entra ID (P2 License)
-- Test User: Chris Davis
-- Role: User Administrator
-
----
-
-## ⚙️ Implementation Steps
-
-### 1. Navigate to PIM
-- Microsoft Entra Admin Center
-- Identity Governance → Privileged Identity Management
-
----
-
-### 2. Assign Eligible Role
-- Selected **User Administrator**
-- Assignment Type: **Eligible**
-- Scope: Directory
-- Assigned to test user
-
-📸 *(Insert screenshot: Role assignment screen)*
-
----
-
-### 3. Configure Assignment Settings
-- Enabled **Permanently Eligible**
-- Set assignment duration within policy limits
-
-📸 *(Insert screenshot: Assignment configuration)*
-
----
-
-### 4. Activate Role (JIT)
-- Navigated to: My Roles
-- Selected **User Administrator**
-- Clicked **Activate**
-
-📸 *(Insert screenshot: Activation screen)*
-
----
-
-### 5. Validate Activation
-- Role moved from **Eligible → Active**
-- Verified activation status
-
-📸 *(Insert screenshot: Active roles view)*
-
----
-
-## 🔍 Key Security Benefits
-
-- Eliminates **permanent admin access**
-- Reduces **attack surface**
-- Supports **Zero Trust principles**
-- Enables **audit and compliance tracking**
-- Prevents **privilege creep**
-
----
-
-## ⚠️ Lessons Learned
-
-- Approval workflows can block activation if not configured correctly
-- Time-bound assignments must align with policy limits
-- Global Administrator roles should be tightly controlled to avoid lockout
-- Always maintain a **break-glass account**
-
----
-
-## 🧠 Real-World Application
-
-In enterprise environments, PIM is used to:
-- Enforce **least privilege access**
-- Provide **temporary elevated access for admins**
-- Meet compliance requirements (SOC 2, ISO 27001, NIST)
-- Monitor privileged account activity
-
----
-
-## 📎 Author
-Chris Davis  
 Cloud Security Engineer | IAM | Zero Trust
