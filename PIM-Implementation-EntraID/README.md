@@ -33,35 +33,36 @@ The goal is to eliminate standing administrative access and introduce controlled
 ### 1. Navigate to Privileged Identity Management
 Accessed PIM through Microsoft Entra ID → Identity Governance.
 
-![Navigate to PIM](./PIM-Implementation-EntraID/images/pim-01-navigation-to-pim.png)
+![Navigate to PIM](./pim-01-navigation-to-pim.png)
+
 
 ---
 
 ### 2. Review Available Roles
 Reviewed available administrative roles and selected **User Administrator**.
 
-![Role Selection List](./PIM-Implementation-EntraID/images/pim-02-role-selection-list.png)
+![Role Selection](./pim-02-role-selection-user-admin.png)
 
 ---
 
 ### 3. Initiate Role Assignment
 Accessed role assignments and initiated a new privileged role assignment.
 
-![Add Assignment Screen](./PIM-Implementation-EntraID/images/pim-03-add-assignment-screen.png)
+![Add Assignment](./pim-03-add-assignment-screen.png)
 
 ---
 
 ### 4. Configure Eligible Assignment
 Assigned the role as **Eligible** to enforce Just-in-Time activation instead of permanent access.
 
-![Eligible Assignment Created](./PIM-Implementation-EntraID/images/pim-04-eligible-assignment-created.png)
+![Eligible Assignment](./pim-04-role-selection-list.png)
 
 ---
 
 ### 5. Review Default Role Settings
 Reviewed baseline role configuration prior to applying governance controls.
 
-![Role Settings Before Edit](./PIM-Implementation-EntraID/images/pim-05-role-settings-before-edit.png)
+![Role Settings Before](./pim-05-role-settings-before-edit.png)
 
 ---
 
@@ -72,28 +73,28 @@ Updated role settings to enforce:
 - Approval workflow
 - Time-bound activation (limited duration)
 
-![Governance Controls Configured](./PIM-Implementation-EntraID/images/pim-06-governance-controls-configured.png)
+![Governance Controls](./pim-06-edit-role-settings-governance-controls.png)
 
 ---
 
 ### 7. Request Role Activation (JIT)
 Initiated role activation from **My Roles**, triggering Just-in-Time elevation.
 
-![Role Activation Request](./PIM-Implementation-EntraID/images/pim-07-role-activation-request.png)
+![Activation Request](./pim-07-role-activation-request.png)
 
 ---
 
 ### 8. Validate Successful Activation
 Confirmed successful activation through system validation checks.
 
-![Role Activation Success](./PIM-Implementation-EntraID/images/pim-08-role-activation-success.png)
+![Activation Success](./pim-08-role-activation-success.png)
 
 ---
 
 ### 9. Verify Active Role Assignment
 Validated that the role transitioned from **Eligible → Active**.
 
-![Active Role Validation](./PIM-Implementation-EntraID/images/pim-09-active-role-validation.png)
+![Active Assignment](./pim-09-active-assignments.png)
 
 ---
 
@@ -104,7 +105,7 @@ Captured audit logs showing:
 - Timestamp
 - Action performed
 
-![Activity Log Audit Trail](./PIM-Implementation-EntraID/images/pim-10-activity-log-audit-trail.png)
+![Audit Logs](./pim-10-activity-log-role-activation.png)
 
 ---
 
