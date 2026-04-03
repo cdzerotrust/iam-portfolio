@@ -130,7 +130,7 @@ In enterprise environments, PIM is used to:
 * Meet compliance requirements (SOC 2, ISO 27001, NIST)
 * Monitor privileged account activity
 
----
+--- 
 
 ## 📎 Author
 
