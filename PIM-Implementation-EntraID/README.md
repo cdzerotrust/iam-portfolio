@@ -1,4 +1,4 @@
-# iam-portfolio
+# PIM-Implementation-EntraID
 
 Identity and Access Management (IAM) hands-on labs and security implementations
 
