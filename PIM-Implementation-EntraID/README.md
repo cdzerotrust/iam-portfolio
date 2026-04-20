@@ -1,4 +1,4 @@
-# PIM-Implementation-EntraID
+# PIM-Implementation-Entra ID
 
 Identity and Access Management (IAM) hands-on labs and security implementations
 
